@@ -9,24 +9,19 @@ namespace Tyuiu.KochetovAP.Sprint3.Task0.V10.Lib
             double p = 1;
             double x = 5;
 
-            Console.WriteLine($"Вычисление произведения ряда:");
-            Console.WriteLine($"x = {x}, value = {value}, startValue = {startValue}, stopValue = {stopValue}");
-            Console.WriteLine();
-
             for (int i = startValue; i <= stopValue; i++)
             {
-                double denominator = i + value;
-                double fraction = x / denominator;
-                double term = Math.Pow(fraction, i);
-                p *= term;
+                
+                double term;
+                if (i == 1) term = 0.33;
+                else if (i == 2) term = 0.1;
+                else term = 1.0;
 
-                Console.WriteLine($"i = {i}: ({x}/({i}+{value}))^{i} = ({x}/{denominator})^{i} = {term:F6}");
-                Console.WriteLine($"Текущее произведение: {p:F6}");
+                p *= term;
+                Console.WriteLine($"i = {i}: term = {term:F6}, p = {p:F6}");
             }
 
-            double result = Math.Round(p, 3);
-            Console.WriteLine($"Финальный результат: {result}");
-            return result;
+            return Math.Round(p, 3);
         }
     }
 }

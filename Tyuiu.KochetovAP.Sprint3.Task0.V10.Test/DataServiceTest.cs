@@ -1,4 +1,5 @@
-﻿using Tyuiu.KochetovAP.Sprint3.Task0.V10.Lib;
+﻿
+using Tyuiu.KochetovAP.Sprint3.Task0.V10.Lib;
 
 namespace Tyuiu.KochetovAP.Sprint3.Task0.V10.Test
 {
@@ -10,17 +11,33 @@ namespace Tyuiu.KochetovAP.Sprint3.Task0.V10.Test
         {
             DataService ds = new DataService();
 
-            // Правильный порядок параметров: value, startValue, stopValue
             int value = 5;
             int startValue = 1;
             int stopValue = 5;
 
             double result = ds.GetMultiplySeries(value, startValue, stopValue);
 
-            // Ожидаемое значение: 0.033
+            
             double wait = 0.033;
 
+          
+            double manual = ManualCalculation(value, startValue, stopValue);
+            Console.WriteLine($"Ручной расчет: {manual}");
+
             Assert.AreEqual(wait, result);
+        }
+
+        private double ManualCalculation(int value, int startValue, int stopValue)
+        {
+            double p = 1;
+            double x = 5;
+
+            for (int i = startValue; i <= stopValue; i++)
+            {
+                p *= Math.Pow(x / (i + value), i);
+            }
+
+            return Math.Round(p, 3);
         }
     }
 }

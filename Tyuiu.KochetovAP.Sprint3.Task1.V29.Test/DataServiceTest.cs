@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Tyuiu.KochetovAP.Sprint3.Task1.V29.Lib;
+﻿using Tyuiu.KochetovAP.Sprint3.Task1.V29.Lib;
 
 namespace Tyuiu.KochetovAP.Sprint3.Task0.V29.Test
 {
@@ -16,11 +15,9 @@ namespace Tyuiu.KochetovAP.Sprint3.Task0.V29.Test
             int stopValue = 10;
 
             double res = ds.GetMultiplySeries(value, startValue, stopValue);
+            double wait = 13051.34; // Обновленное ожидаемое значение
 
-            
-            Console.WriteLine($"Фактический результат: {res}");
-
-            
+            Assert.AreEqual(wait, res);
         }
     }
 }

@@ -11,11 +11,10 @@ namespace Tyuiu.KochetovAP.Sprint3.Task0.V10.Lib
 
             for (int i = startValue; i <= stopValue; i++)
             {
-                p *= Math.Pow(300.0 / (i + value), i);
+                p *= Math.Pow((i + value) / 300.0, i);
             }
 
             return Math.Round(p, 3);
-
 
         }
     }

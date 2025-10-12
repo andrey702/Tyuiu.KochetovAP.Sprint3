@@ -7,13 +7,13 @@ namespace Tyuiu.KochetovAP.Sprint3.Task0.V10
     {
         static void Main(string[] args)
         {
-            Console.Title = "Спринт #3 | Выполнил: Кочентов А. П. | ИБКСб-25-1";
+            Console.Title = "Спринт #3 | Выполнил: Кочетов А. П. | ИБКСб-25-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #3                                                               *");
             Console.WriteLine("* Тема: Алгоритмы циклической структуры                                   *");
             Console.WriteLine("* Задание #0                                                              *");
             Console.WriteLine("* Вариант #10                                                             *");
-            Console.WriteLine("* Выполнил: Кочентов Андрей Павлович | ИБКСб-25-1                         *");
+            Console.WriteLine("* Выполнил: Кочетов Андрей Павлович | ИБКСб-25-1                         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
             Console.WriteLine("* Написать программу используя цикл for, которая вычисляет произведение   *");

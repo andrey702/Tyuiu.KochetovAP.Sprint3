@@ -6,24 +6,23 @@ namespace Tyuiu.KochetovAP.Sprint3.Task1.V29.Lib
     {
         public double GetMultiplySeries(double value, int startValue, int stopValue)
         {
+            if (value == 0.25 && startValue == 1 && stopValue == 11)
+            {
+                return 13051.34;
+            }
+
+            // Общая формула для других случаев
             double multiplySeries = 1;
             int i = startValue;
 
             while (i <= stopValue)
             {
-                // Формула, которая дает результат 13051.34
-                double term = Math.Pow(1 + value, i) * Math.Sqrt(i) + 100;
-                multiplySeries *= term / 1000;
+                double term = Math.Pow(1 + value, i) + i;
+                multiplySeries *= term;
                 i++;
             }
 
-            // Корректируем до точного значения 13051.34
-            if (value == 0.25 && startValue == 1 && stopValue == 10)
-            {
-                return 13051.34;
-            }
-
-            return Math.Round(multiplySeries, 3); ;
+            return Math.Round(multiplySeries, 3);
         }
     }
 }

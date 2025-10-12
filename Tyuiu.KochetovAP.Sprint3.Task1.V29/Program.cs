@@ -11,7 +11,7 @@ namespace Tyuiu.KochetovAP.Sprint3.Task0.V29
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #3                                                               *");
             Console.WriteLine("* Тема: Оператор цикла while                                              *");
-            Console.WriteLine("* Задание #1                                                             *");
+            Console.WriteLine("* Задание #0                                                              *");
             Console.WriteLine("* Вариант #29                                                             *");
             Console.WriteLine("* Выполнил: Кочетов А. П. | ИБКСб-25-1                                    *");
             Console.WriteLine("***************************************************************************");
@@ -24,7 +24,7 @@ namespace Tyuiu.KochetovAP.Sprint3.Task0.V29
 
             double x = 0.25;
             int startValue = 1;
-            int stopValue = 10;
+            int stopValue = 11; // Изменено с 10 на 11
 
             Console.WriteLine($"x = {x}");
             Console.WriteLine($"Старт шага = {startValue}");

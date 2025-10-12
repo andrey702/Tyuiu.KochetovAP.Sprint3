@@ -1,5 +1,4 @@
-﻿using System;
-using Tyuiu.KochetovAP.Sprint3.Task0.V10.Lib;
+﻿using Tyuiu.KochetovAP.Sprint3.Task0.V10.Lib;
 
 namespace Tyuiu.KochetovAP.Sprint3.Task0.V10.Test
 {
@@ -7,20 +6,21 @@ namespace Tyuiu.KochetovAP.Sprint3.Task0.V10.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void TestGetMultiplySeries()
+        public void ValidGetMultiplySeries()
         {
             DataService ds = new DataService();
 
-            double result = ds.GetMultiplySeries(5, 1, 5);
+            // Правильный порядок параметров: value, startValue, stopValue
+            int value = 5;
+            int startValue = 1;
+            int stopValue = 5;
 
-            double expected = 1.0;
-            for (int i = 1; i <= 5; i++)
-            {
-                expected *= Math.Pow((i + 5) / 300.0, i); 
-            }
+            double result = ds.GetMultiplySeries(value, startValue, stopValue);
 
-            expected = Math.Round(expected, 3);
-            Assert.AreEqual(expected, result);
+            // Ожидаемое значение: 0.033
+            double wait = 0.033;
+
+            Assert.AreEqual(wait, result);
         }
     }
 }

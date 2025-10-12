@@ -1,48 +1,45 @@
 ﻿using System;
 using Tyuiu.KochetovAP.Sprint3.Task0.V10.Lib;
 
-namespace Tyuiu.KochetovAP.Sprint3.Task3.V10
+namespace Tyuiu.KochetovAP.Sprint3.Task0.V10
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.Title = "Спринт #3 | Выполнил: Кочетов А. П. | ИБКСб-25-1";
+            Console.Title = "Спринт #3 | Выполнил: Кочентов А. П. | ИБКСб-25-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #3                                                               *");
-            Console.WriteLine("* Тема: Оператор цикла for                                                *");
-            Console.WriteLine("* Задание #3                                                              *");
+            Console.WriteLine("* Тема: Алгоритмы циклической структуры                                   *");
+            Console.WriteLine("* Задание #0                                                              *");
             Console.WriteLine("* Вариант #10                                                             *");
-            Console.WriteLine("* Выполнил: Кочетов А. П. | ИБКСб-25-1                                    *");
+            Console.WriteLine("* Выполнил: Кочентов Андрей Павлович | ИБКСб-25-1                         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Написать программу, используя цикл for, которая вычисляет произведение  *");
-            Console.WriteLine("* ряда по формуле:                                                        *");
-            Console.WriteLine("*               5                                                         *");
-            Console.WriteLine("*        P =  Π (300 / (i + x))^i ,  при x = 5                            *");
-            Console.WriteLine("*              i=1                                                        *");
+            Console.WriteLine("* Написать программу используя цикл for, которая вычисляет произведение   *");
+            Console.WriteLine("* ряда по формуле, при x = 5                                              *");
+            Console.WriteLine("*                                                                         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            int x = 5;
+            int value = 5;
             int startValue = 1;
             int stopValue = 5;
 
-            Console.WriteLine($"x = {x}");
-            Console.WriteLine($"Начало диапазона: {startValue}");
-            Console.WriteLine($"Конец диапазона: {stopValue}");
+            Console.WriteLine($"Параметр value = {value}");
+            Console.WriteLine($"Старт шага = {startValue}");
+            Console.WriteLine($"Конец шага = {stopValue}");
 
+            Console.WriteLine();
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
             DataService ds = new DataService();
-            double result = ds.GetMultiplySeries(x, startValue, stopValue);
+            double result = ds.GetMultiplySeries(value, startValue, stopValue);
 
-            Console.WriteLine($"Результат вычисления P = {result}");
-
-            Console.WriteLine("***************************************************************************");
+            Console.WriteLine($"Произведение ряда = {result}");
             Console.ReadKey();
         }
     }

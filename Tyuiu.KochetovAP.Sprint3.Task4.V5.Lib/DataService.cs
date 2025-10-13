@@ -21,7 +21,8 @@ namespace Tyuiu.KochetovAP.Sprint3.Task4.V5.Lib
                 sum += y;
             }
 
-            return sum;
+            
+            return Math.Round(sum, 3);
         }
     }
 }

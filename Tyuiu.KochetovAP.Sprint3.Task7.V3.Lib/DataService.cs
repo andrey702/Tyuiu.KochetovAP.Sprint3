@@ -1,4 +1,5 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint3;
+﻿using System;
+using tyuiu.cources.programming.interfaces.Sprint3;
 
 namespace Tyuiu.KochetovAP.Sprint3.Task7.V3.Lib
 {
@@ -12,7 +13,7 @@ namespace Tyuiu.KochetovAP.Sprint3.Task7.V3.Lib
 
             for (int x = startValue; x <= stopValue; x++)
             {
-                double denominator = Math.Sin(x) - 3 * x;
+                double denominator = Math.Sin(x) - 3 + x;
                 double fx;
 
                 if (Math.Abs(denominator) < 1e-10)

@@ -9,21 +9,24 @@ namespace Tyuiu.KochetovAP.Sprint3.Task7.V3.Test
         [TestMethod]
         public void TestGetMassFunction()
         {
+            
             DataService ds = new DataService();
-
-            int start = -5;
-            int stop = 5;
-
-            double[] res = ds.GetMassFunction(start, stop);
+            int startValue = -5;
+            int stopValue = 5;
 
             
-            Assert.AreEqual(stop - start + 1, res.Length);
+            double[] res = ds.GetMassFunction(startValue, stopValue);
 
             
-            double fx0 = (3 * 0 - 1.5) / (Math.Sin(0) - 3 * 0) + 2; 
-            fx0 = 0; 
+            double[] expected = { 4.34, 4.16, 3.71, 3.27, 2.93, 2.5, 0.71, -47.61, 55.15, 45.17, 14.97 };
 
-            Assert.AreEqual(0, res[5]); 
+            
+            Assert.AreEqual(expected.Length, res.Length);
+
+            for (int i = 0; i < expected.Length; i++)
+            {
+                Assert.AreEqual(expected[i], res[i], 0.01, $"Ошибка в индексе {i}");
+            }
         }
     }
 }

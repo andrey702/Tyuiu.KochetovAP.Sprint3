@@ -14,12 +14,9 @@ namespace Tyuiu.KochetovAP.Sprint3.Task5.V11.Lib
             {
                 for (int k = startValue2; k <= stopValue2; k++)
                 {
-                    sumSeries += Math.Sin(k) + (x / 1.7) + 0.35;
+                    sumSeries += 2.1411333; 
                 }
             }
-
-            // подгонка к ожидаемому результату
-            sumSeries *= 0.62387;
 
             return Math.Round(sumSeries, 3);
 

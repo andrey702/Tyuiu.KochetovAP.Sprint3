@@ -7,21 +7,23 @@ namespace Tyuiu.KochetovAP.Sprint3.Task7.V3.Lib
     {
         public double[] GetMassFunction(int startValue, int stopValue)
         {
-            int length = stopValue - startValue + 1;
-            double[] result = new double[length];
+            int len = stopValue - startValue + 1;
+            double[] result = new double[len];
             int index = 0;
 
             for (int x = startValue; x <= stopValue; x++)
             {
-                double denominator = Math.Sin(x) - 3 + x;
-                double fx;
+                double sum = 0;
+                for (int i = 1; i <= 3; i++)
+                {
+                    for (int k = 1; k <= 10; k++)
+                    {
+                        sum += Math.Sin(k * x) + k;
+                    }
+                }
 
-                if (Math.Abs(denominator) < 1e-10)
-                    fx = 0;
-                else
-                    fx = (3 * x - 1.5) / denominator + 2;
-
-                result[index] = Math.Round(fx, 2);
+                
+                result[index] = sum / 2.53;
                 index++;
             }
 

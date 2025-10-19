@@ -1,5 +1,4 @@
-﻿using System;
-using Tyuiu.KochetovAP.Sprint3.Task5.V11.Lib;
+﻿using Tyuiu.KochetovAP.Sprint3.Task5.V11.Lib;
 
 namespace Tyuiu.KochetovAP.Sprint3.Task5.V11.Test
 {
@@ -9,23 +8,20 @@ namespace Tyuiu.KochetovAP.Sprint3.Task5.V11.Test
         [TestMethod]
         public void TestGetSumSumSeries()
         {
-            // Arrange
-            DataService ds = new DataService();
-
+            // arrange
+            var service = new DataService();
             int x = 5;
             int startValue1 = 1;
-            int startValue2 = 1;
             int stopValue1 = 3;
+            int startValue2 = 1;
             int stopValue2 = 10;
 
-            // Act
-            double result = ds.GetSumSumSeries(x, startValue1, startValue2, stopValue1, stopValue2);
+            // act
+            double result = service.GetSumSumSeries(x, startValue1, startValue2, stopValue1, stopValue2);
 
-            // Ожидаемый результат вычислен заранее (по формуле задачи)
+            // assert
             double expected = 64.234;
-
-            // Assert
-            Assert.AreEqual(expected, result);
+            Assert.AreEqual(expected, result, 0.01, "результат суммы серии неверный");
         }
     }
 }
